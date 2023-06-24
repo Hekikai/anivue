@@ -8,6 +8,17 @@ export default defineConfig({
   presets: [
     typographyPreset,
     presetUno(),
-    presetWebFonts(),
+    presetWebFonts({
+      provider: 'google',
+      fonts: {
+        sans: 'Poppins',
+        poppins: [
+          {
+            name: 'Poppins',
+            weights: ['300', '400', '500', '600', '700'],
+          },
+        ],
+      },
+    }),
   ],
 })
