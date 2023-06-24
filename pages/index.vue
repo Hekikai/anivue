@@ -5,7 +5,7 @@ const counter = ref(1)
 </script>
 
 <template>
-  <div class="ml-3">
+  <div class="text-primary-purple">
     index page {{ counter }}
   </div>
 </template>

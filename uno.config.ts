@@ -1,12 +1,10 @@
 import { defineConfig, presetUno, presetWebFonts } from 'unocss'
-import { typographyPreset } from './uno-presets'
+import { COLOR_PRESET } from './uno-presets'
 
 export default defineConfig({
-  rules: [
-
-  ],
+  rules: [],
   presets: [
-    typographyPreset,
+    COLOR_PRESET,
     presetUno(),
     presetWebFonts({
       provider: 'google',
