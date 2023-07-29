@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Rubik', sans-serif;
     height: auto;       /* Allows content to grow beyond the page without overflow */
     width: auto;        /* Allows content to grow beyond the page without overflow */
     min-height: 100vh;  /* Starts web page with 100% height. Uses the viewport's height. Only works in modern HTML5 browsers */
