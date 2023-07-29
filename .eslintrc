@@ -1,4 +1,7 @@
 {
   "extends": ["@antfu", "@unocss"],
-  "rules": {}
+  "rules": {
+    "@typescript-eslint/semi": "off",
+    "semi": ["error", "always"]
+  }
 }
