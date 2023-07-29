@@ -1,7 +1,21 @@
 {
   "extends": ["@antfu", "@unocss"],
   "rules": {
+    // TS / JS section
     "@typescript-eslint/semi": "off",
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+
+    // Vue section
+    "vue/component-name-in-template-casing": ["error", "kebab-case", {
+      "registeredComponentsOnly": true
+    }],
+    "vue/multi-word-component-names": ["error", {
+      "ignores": ["default"]
+    }],
+    "vue/custom-event-name-casing": ["error", "kebab-case"],
+
+    // Code style preferences
+    "antfu/top-level-function": [0],
+    "curly": ["off"]
   }
 }
