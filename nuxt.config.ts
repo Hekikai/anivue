@@ -3,4 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ['@/assets/css/_main.css', '@/assets/css/_normalize.css'],
   modules: ['@pinia/nuxt', '@unocss/nuxt'],
+  imports: {
+    autoImport: false,
+  },
 })

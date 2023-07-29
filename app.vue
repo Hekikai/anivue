@@ -1,3 +1,13 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  <NuxtPage />
+  <div>
+    <NuxtPage />
+  </div>
 </template>
+
+<style module>
+
+</style>
