@@ -10,8 +10,12 @@ export default defineNuxtConfig({
     typeCheck: false,
   },
   srcDir: 'src/',
-  css: ['@/assets/css/_main.css', '@/assets/css/_normalize.css'],
-  modules: ['@pinia/nuxt', '@unocss/nuxt'],
-})
+  css: [
+    '@/assets/css/_normalize.css',
+    '@/assets/css/_main.css',
+    '@/assets/css/_fonts.css',
+    '@/assets/css/_typography.css',
+    '@/assets/css/_variables.css',
+  ],
   modules: ['@pinia/nuxt'],
 });
