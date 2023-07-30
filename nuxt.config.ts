@@ -13,3 +13,5 @@ export default defineNuxtConfig({
   css: ['@/assets/css/_main.css', '@/assets/css/_normalize.css'],
   modules: ['@pinia/nuxt', '@unocss/nuxt'],
 })
+  modules: ['@pinia/nuxt'],
+});

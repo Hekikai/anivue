@@ -1,5 +1,5 @@
 {
-  "extends": ["@antfu", "@unocss"],
+  "extends": ["@antfu"],
   "rules": {
     // TS / JS section
     "@typescript-eslint/semi": "off",
