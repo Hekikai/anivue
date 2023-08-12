@@ -1,12 +1,12 @@
 <script setup lang="ts">
-
+import AHeader from '~/components/header/AHeader.vue';
 </script>
 
 <template>
-  <div>
-    Some default layout shared across all pages!
+  <main>
+    <a-header />
     <slot />
-  </div>
+  </main>
 </template>
 
 <style module>
