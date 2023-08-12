@@ -10,9 +10,12 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
   <nav :class="$style.nav">
     <div :class="$style.logo">
       <anivue-logo :class="$style.logoSvg" />
-      <span :class="$style.logoTitle">
+      <nuxt-link
+        :class="$style.logoTitle"
+        to="/"
+      >
         Anivue
-      </span>
+      </nuxt-link>
     </div>
 
     <ul :class="$style.links">
@@ -21,33 +24,33 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
         to="/anime"
       />
       <a-header-link
-        title="Index"
-        to="/"
+        title="Манга"
+        to="/manga"
       />
       <a-header-link
-        title="Index"
-        to="/"
+        title="Дорамы"
+        to="/dorams"
       />
     </ul>
 
     <ul :class="$style.navButtons">
       <a-header-link
         :class="$style.navIcon"
-        to="/"
+        to="/page"
       >
         <a-search-icon />
       </a-header-link>
 
       <a-header-link
         :class="$style.navIcon"
-        to="/"
+        to="/page"
       >
         <a-notify-icon />
       </a-header-link>
 
       <a-header-link
         :class="$style.navIcon"
-        to="/"
+        to="/page"
       >
         <a-profile-icon />
       </a-header-link>
@@ -58,7 +61,7 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
 <style module lang="scss">
 .nav {
   display: flex;
-  padding: 18px 72px;
+  padding: 18px 0;
 }
 
 .logo {
@@ -76,7 +79,8 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
   font-size: 18px;
   line-height: 20px;
   font-weight: 500;
-  color: var(--neutral-900)
+  color: var(--neutral-900);
+  text-decoration: none;
 }
 
 .links {
