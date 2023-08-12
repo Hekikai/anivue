@@ -7,7 +7,11 @@ body {
     height: auto;       /* Allows content to grow beyond the page without overflow */
     width: auto;        /* Allows content to grow beyond the page without overflow */
     min-height: 100vh;  /* Starts web page with 100% height. Uses the viewport's height. Only works in modern HTML5 browsers */
-    overflow-y: scroll; /* Optional: Adds an empty scrollbar to the right margin in case content grows vertically, creating a scrollbar.  Allows for better width calculations, as the browser pre-calculates width before scrollbar appears, avoiding page content shifting.*/
+    overflow-y: auto; /* Optional: Adds an empty scrollbar to the right margin in case content grows vertically, creating a scrollbar.  Allows for better width calculations, as the browser pre-calculates width before scrollbar appears, avoiding page content shifting.*/
     margin: 0;
     padding: 0;
+}
+
+body #__nuxt {
+    height: 100vh;
 }
