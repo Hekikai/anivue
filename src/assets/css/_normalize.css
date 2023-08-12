@@ -38,9 +38,14 @@
  * Remove the margin on nested lists in Chrome, Edge, and Safari.
  */
 
+:where(ul) {
+    list-style-type: none;
+}
+
 :where(dl, ol, ul) :where(dl, ol, ul) {
     margin-block-end: 0;
     margin-block-start: 0;
+    list-style-type: none;
 }
 
 /**
