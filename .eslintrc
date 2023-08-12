@@ -3,19 +3,50 @@
   "rules": {
     // TS / JS section
     "@typescript-eslint/semi": "off",
+    "@typescript-eslint/brace-style": "off",
+    "brace-style": [2, "1tbs"],
     "semi": ["error", "always"],
 
     // Vue section
     "vue/component-name-in-template-casing": ["error", "kebab-case", {
       "registeredComponentsOnly": true
     }],
-    "vue/multi-word-component-names": ["error", {
-      "ignores": ["default"]
-    }],
+    // Produces so many problems with nuxt philosophy :/
+    //  "vue/multi-word-component-names": ["error", {
+    //    "ignores": ["default", "mobile", "lobby"]
+    //  }],
     "vue/custom-event-name-casing": ["error", "kebab-case"],
+    "vue/block-order": ["error", {
+      "order": [["script","template"], "style"]
+    }],
+    // This if deprecated version of vue/block-order
+    "vue/component-tags-order": ["off"],
+    "vue/define-macros-order": ["error", {
+      "order": ["defineOptions", "defineProps", "defineEmits", "defineSlots"]
+    }],
+    "vue/prefer-import-from-vue": ["error"],
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": {
+        "max": 1
+      },
+      "multiline": {
+        "max": 1
+      }
+    }],
+    "vue/html-self-closing":["error", {
+      "html": {
+        "void": "always"
+      }
+    }],
 
     // Code style preferences
     "antfu/top-level-function": [0],
-    "curly": ["off"]
+    "antfu/if-newline": [0],
+    "curly": [2, "all"],
+    "max-len": ["error", {
+      "code": 120
+    }],
+    "no-case-declarations": "off",
+    "require-await": "error"
   }
 }
