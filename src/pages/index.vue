@@ -19,6 +19,7 @@ import TitleAside from '~/components/main/TitleAside.vue';
 .gradient {
   position: absolute;
   left: 0;
+  right: 0;
   top: 0;
 
   z-index: -1;
@@ -26,17 +27,18 @@ import TitleAside from '~/components/main/TitleAside.vue';
   &::after {
     content:'';
     position:absolute;
-    left:0;
-    top:0;
+    display: inline-block;
+    top: 0;
     width: 100%;
-    height:100%;
-    display:inline-block;
-    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* IE10+ */
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C */
+    height: 100%;
+    background: linear-gradient(0deg, rgba(23, 23, 23, 0.4), rgba(23, 23, 23, 0.4)),
+            linear-gradient(180deg, rgba(23, 23, 23, 0.3) 0%, rgba(23, 23, 23, 0.21) 3.62%,
+            rgba(23, 23, 23, 0.15) 7.21%, rgba(23, 23, 23, 0.06) 12.18%, rgba(23, 23, 23, 0) 17.4%,
+            rgba(23, 23, 23, 0) 17.4%), linear-gradient(90deg, rgba(23, 23, 23, 0.3) 0%,
+            rgba(23, 23, 23, 0.255) 17.17%, rgba(23, 23, 23, 0.21) 27.54%, rgba(23, 23, 23, 0.15) 35.72%,
+            rgba(23, 23, 23, 0.06) 43.46%, rgba(23, 23, 23, 0) 50%), linear-gradient(0deg, #FAFAFA 0%,
+            rgba(253, 253, 253, 0.8) 3.36%, rgba(250, 250, 250, 0.6) 6.02%, rgba(250, 250, 250, 0.2) 13.47%,
+            rgba(250, 250, 250, 0) 20.06%);
   }
 
   img {

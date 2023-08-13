@@ -11,6 +11,8 @@ import AHeader from '~/components/header/AHeader.vue';
 
 <style module lang="scss">
 .main {
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0 72px;
 }
 </style>
