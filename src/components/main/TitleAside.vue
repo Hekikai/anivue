@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import AButton from '~/components/button/AButton.vue';
+import ABookmarkOutlineIcon from '~/components/icons/ABookmarkOutlineIcon.vue';
+import APlayIcon from '~/components/icons/APlayIcon.vue';
 </script>
 
 <template>
@@ -25,9 +27,26 @@ import AButton from '~/components/button/AButton.vue';
     </p>
     <footer :class="$style.titleFooter">
       <a-button
-        text="Начать смотреть"
+        text="Начать просмотр с 1 серии"
         type="primary"
       />
+
+      <a-button
+        text="Трейлер"
+        type="tertiary"
+      >
+        <template #left-icon>
+          <a-play-icon />
+        </template>
+      </a-button>
+
+      <a-button
+        type="tertiary"
+      >
+        <template #right-icon>
+          <a-bookmark-outline-icon />
+        </template>
+      </a-button>
     </footer>
   </aside>
 </template>
