@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import AButton from '~/components/button/AButton.vue';
 </script>
 
 <template>
@@ -23,7 +23,12 @@
       Джорно Джованна — юный, но весьма амбициозный парень, являющийся сыном знаменитого Дио Брандо.
       Однако, в отличие от своего отца, Джорно избрал совсем иной путь к достижению свой мечты
     </p>
-    <footer :class="$style.titleFooter" />
+    <footer :class="$style.titleFooter">
+      <a-button
+        text="Начать смотреть"
+        type="primary"
+      />
+    </footer>
   </aside>
 </template>
 
@@ -41,6 +46,7 @@
 
   h1 {
     color: var(--neutral-50);
+    margin-bottom: 20px;
   }
 
   ul {
@@ -48,7 +54,7 @@
     gap: 20px;
     align-items: center;
     color: var(--neutral-50);
-    margin-top: 20px;
+    margin-bottom: 18px;
 
     li:nth-child(2n) {
       width: 5px;
@@ -60,8 +66,8 @@
   }
 
   p {
-    margin-top: 18px;
-    color: var(--neutral-50)
+    color: var(--neutral-50);
+    margin-bottom: 36px;
   }
 }
 
