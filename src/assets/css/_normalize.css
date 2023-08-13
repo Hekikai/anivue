@@ -114,6 +114,7 @@
  */
 
 :where(button, input, select) {
+    font-family: inherit;
     margin: 0;
 }
 
@@ -122,6 +123,8 @@
  */
 
 :where(button) {
+    border-style: none;
+    overflow: visible;
     text-transform: none;
 }
 
