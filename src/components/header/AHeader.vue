@@ -8,52 +8,53 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
 
 <template>
   <nav :class="$style.nav">
-    <div :class="$style.logo">
-      <anivue-logo :class="$style.logoSvg" />
-      <nuxt-link
-        :class="$style.logoTitle"
+    <div>
+      <a-header-link
         to="/"
+        :class="$style.logo"
       >
-        Anivue
-      </nuxt-link>
+        <anivue-logo :class="$style.logoSvg" />
+        <span>Anivue</span>
+      </a-header-link>
     </div>
 
     <ul :class="$style.links">
-      <a-header-link
-        title="Аниме"
-        to="/anime"
-      />
-      <a-header-link
-        title="Манга"
-        to="/manga"
-      />
-      <a-header-link
-        title="Дорамы"
-        to="/dorams"
-      />
+      <li>
+        <a-header-link
+          title="Аниме"
+          to="/anime"
+        />
+      </li>
+      <li>
+        <a-header-link
+          title="Манга"
+          to="/manga"
+        />
+      </li>
+      <li>
+        <a-header-link
+          title="Дорамы"
+          to="/dorams"
+        />
+      </li>
     </ul>
 
     <ul :class="$style.navButtons">
-      <a-header-link
-        :class="$style.navIcon"
-        to="/page"
-      >
-        <a-search-icon />
-      </a-header-link>
-
-      <a-header-link
-        :class="$style.navIcon"
-        to="/page"
-      >
-        <a-notify-icon />
-      </a-header-link>
-
-      <a-header-link
-        :class="$style.navIcon"
-        to="/page"
-      >
-        <a-profile-icon />
-      </a-header-link>
+      <li>
+        <a-header-link to="/page">
+          <a-search-icon />
+        </a-header-link>
+      </li>
+      <li>
+        <a-header-link to="/page">
+          <a-notify-icon />
+        </a-header-link>
+      </li>
+      <li>
+        <a-header-link to="/page">
+          <a-profile-icon />
+        </a-header-link>
+      </li>
     </ul>
   </nav>
 </template>
@@ -68,6 +69,10 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
   display: flex;
   gap: 10px;
   align-items: center;
+
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 110%;
 }
 
 .logoSvg {
@@ -79,8 +84,13 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
   font-size: 18px;
   line-height: 20px;
   font-weight: 500;
+
   color: var(--neutral-900);
   text-decoration: none;
+
+  &:focus, &:active {
+    outline-width: 0;
+  }
 }
 
 .links {
@@ -91,15 +101,15 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
 }
 
 .navButtons {
-  margin-left: auto;
   display: flex;
   align-items: center;
   gap: 18px;
-}
 
-.navIcon {
-  width: 24px;
-  height: 24px;
-  color: var(--neutral-800);
+  margin-left: auto;
+
+  li {
+    width: 24px;
+    height: 24px;
+  }
 }
 </style>
