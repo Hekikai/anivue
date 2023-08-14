@@ -55,6 +55,25 @@ withDefaults(defineProps<{
   }
 }
 
+.secondary {
+  background-color: var(--lime-200);
+
+  &:active {
+    color: var(--neutral-700);
+    background-color: var(--lime-300);
+  }
+
+  &:hover {
+    background-color: var(--lime-100);
+  }
+
+  &:disabled {
+    color: var(--neutral-400);
+    background-color: var(--lime-50);
+    cursor: not-allowed;
+  }
+}
+
 .tertiary {
   background-color: var(--neutral-100);
 
