@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AHeaderLink from '~/components/header/AHeaderLink.vue';
+import ALink from '~/components/header/ALink.vue';
 import AnivueLogo from '~/components/icons/AnivueLogo.vue';
 import ANotifyIcon from '~/components/icons/ANotifyIcon.vue';
 import AProfileIcon from '~/components/icons/AProfileIcon.vue';
@@ -9,30 +9,37 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
 <template>
   <nav :class="$style.nav">
     <div>
-      <a-header-link
+      <a-link
         to="/"
         :class="$style.logo"
+        type="primary"
       >
         <anivue-logo :class="$style.logoSvg" />
         <span>Anivue</span>
-      </a-header-link>
+      </a-link>
     </div>
 
     <ul :class="$style.links">
       <li>
-        <a-header-link
+        <a-link
+          type="primary"
+          size="sm-bold"
           title="Аниме"
           to="/anime"
         />
       </li>
       <li>
-        <a-header-link
+        <a-link
+          type="primary"
+          size="sm-bold"
           title="Манга"
           to="/manga"
         />
       </li>
       <li>
-        <a-header-link
+        <a-link
+          type="primary"
+          size="sm-bold"
           title="Дорамы"
           to="/dorams"
         />
@@ -41,19 +48,28 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
 
     <ul :class="$style.navButtons">
       <li>
-        <a-header-link to="/page">
+        <a-link
+          to="/page"
+          type="primary"
+        >
           <a-search-icon />
-        </a-header-link>
+        </a-link>
       </li>
       <li>
-        <a-header-link to="/page">
+        <a-link
+          to="/page"
+          type="primary"
+        >
           <a-notify-icon />
-        </a-header-link>
+        </a-link>
       </li>
       <li>
-        <a-header-link to="/page">
+        <a-link
+          to="/page"
+          type="primary"
+        >
           <a-profile-icon />
-        </a-header-link>
+        </a-link>
       </li>
     </ul>
   </nav>
@@ -69,10 +85,6 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
   display: flex;
   gap: 10px;
   align-items: center;
-
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 110%;
 }
 
 .logoSvg {
