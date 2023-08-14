@@ -41,7 +41,7 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
           type="primary"
           size="sm-bold"
           title="Дорамы"
-          to="/dorams"
+          to="/dorama"
         />
       </li>
     </ul>
@@ -49,7 +49,7 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
     <ul :class="$style.navButtons">
       <li>
         <a-link
-          to="/page"
+          to="/manga"
           type="primary"
         >
           <a-search-icon />
@@ -57,7 +57,7 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
       </li>
       <li>
         <a-link
-          to="/page"
+          to="/manga"
           type="primary"
         >
           <a-notify-icon />
@@ -65,7 +65,7 @@ import ASearchIcon from '~/components/icons/ASearchIcon.vue';
       </li>
       <li>
         <a-link
-          to="/page"
+          to="/manga"
           type="primary"
         >
           <a-profile-icon />
