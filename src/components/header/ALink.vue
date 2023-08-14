@@ -62,10 +62,6 @@ const isOnIndexPage = computed(() => useRoute().name === 'index');
     }
   }
 
-  &.indexLink {
-    color: var(--neutral-300);
-  }
-
   &.lg {
     font-size: 18px;
     font-weight: 400;

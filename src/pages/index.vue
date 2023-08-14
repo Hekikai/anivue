@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import ALink from '~/components/header/ALink.vue';
+import GenreList from '~/components/main/GenreList.vue';
 import TitleAside from '~/components/main/TitleAside.vue';
 </script>
 
@@ -12,6 +14,23 @@ import TitleAside from '~/components/main/TitleAside.vue';
     </div>
 
     <title-aside />
+
+    <genre-list :class="$style.genreCarousel" />
+
+    <section :class="$style.ongoing">
+      <div :class="$style.ongoingHeader">
+        <h3 class="heading-3">
+          Сейчас на экранах
+        </h3>
+        <a-link
+          to="/anime"
+          type="secondary"
+          size="sm"
+        >
+          Смотреть еще
+        </a-link>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -53,5 +72,19 @@ import TitleAside from '~/components/main/TitleAside.vue';
 .container {
   display: flex;
   flex-direction: column;
+}
+
+.genreCarousel {
+  padding: 40px 0 20px 0;
+  margin-bottom: 30px;
+}
+
+.ongoing {
+
+}
+
+.ongoingHeader {
+  display: flex;
+  justify-content: space-between;
 }
 </style>

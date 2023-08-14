@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// TODO: make a-header-link component
 import ALink from '~/components/header/ALink.vue';
 import AnivueLogo from '~/components/icons/AnivueLogo.vue';
 import ANotifyIcon from '~/components/icons/ANotifyIcon.vue';
