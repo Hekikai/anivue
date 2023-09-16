@@ -79,12 +79,20 @@ import ASearchIcon from '@/shared/icons/ASearchIcon.vue';
 .nav {
   display: flex;
   padding: 18px 0;
+  background-color: var(--neutral-50);
 }
 
 .logo {
   display: flex;
   gap: 10px;
   align-items: center;
+
+  span {
+    color: currentColor;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 110%;
+  }
 }
 
 .logoSvg {

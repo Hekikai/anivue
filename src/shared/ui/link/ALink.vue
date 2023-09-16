@@ -15,7 +15,7 @@ withDefaults(defineProps<{
   title: '',
 });
 
-const isOnIndexPage = computed(() => useRoute().name === 'index');
+const isOnIndexPage = computed(() => useRoute().name === 'Main');
 </script>
 
 <template>
