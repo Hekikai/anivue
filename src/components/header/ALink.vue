@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useRoute } from '#app';
+import { useRoute } from 'vue-router';
 
 type ALinkType = 'primary' | 'secondary'
 type ALinkSize = 'lg' | 'md' | 'sm' | 'sm-bold' | 'xs'

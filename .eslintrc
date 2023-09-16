@@ -3,21 +3,21 @@
   "rules": {
     // TS / JS section
     "@typescript-eslint/semi": "off",
-    "@typescript-eslint/brace-style": "off",
-    "brace-style": [2, "1tbs"],
-    "semi": ["error", "always"],
+      "@typescript-eslint/brace-style": "off",
+      "brace-style": [2, "1tbs"],
+      "semi": ["error", "always"],
+      "@typescript-eslint/prefer-for-of": "error",
 
-    // Vue section
-    "vue/component-name-in-template-casing": ["error", "kebab-case", {
-      "registeredComponentsOnly": true
+      // Vue section
+      "vue/component-name-in-template-casing": ["error", "kebab-case", {
+        "registeredComponentsOnly": true
     }],
-    // Produces so many problems with nuxt philosophy :/
-    //  "vue/multi-word-component-names": ["error", {
-    //    "ignores": ["default", "mobile", "lobby"]
-    //  }],
+    "vue/multi-word-component-names": ["error", {
+      "ignores": ["default", "mobile", "lobby"]
+    }],
     "vue/custom-event-name-casing": ["error", "kebab-case"],
     "vue/block-order": ["error", {
-      "order": [["script","template"], "style"]
+      "order": [["script", "template"], "style"]
     }],
     // This if deprecated version of vue/block-order
     "vue/component-tags-order": ["off"],
@@ -32,10 +32,10 @@
       "multiline": {
         "max": 1
       }
-    }],
+   }],
     "vue/html-self-closing":["error", {
-      "html": {
-        "void": "always"
+    "html": {
+      "void": "always"
       }
     }],
 
@@ -47,6 +47,8 @@
       "code": 120
     }],
     "no-case-declarations": "off",
-    "require-await": "error"
+    "require-await": "error",
+    "no-console": "off",
+    "n/prefer-global/process": "off"
   }
 }

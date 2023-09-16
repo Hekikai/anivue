@@ -33,7 +33,11 @@ withDefaults(defineProps<{
   border-radius: 14px;
 
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
 .primary {

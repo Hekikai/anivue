@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import AButton from '~/components/button/AButton.vue';
-import ACyberpunkIcon from '~/components/icons/ACyberpunkIcon.vue';
-import ADramaIcon from '~/components/icons/ADramaIcon.vue';
-import AFantasyIcon from '~/components/icons/AFantasyIcon.vue';
-import AFemaleIcon from '~/components/icons/AFemaleIcon.vue';
-import AMagicIcon from '~/components/icons/AMagicIcon.vue';
-import AMaleIcon from '~/components/icons/AMaleIcon.vue';
-import APsychologyIcon from '~/components/icons/APsychologyIcon.vue';
-import ARomanceIcon from '~/components/icons/ARomanceIcon.vue';
-import ASportIcon from '~/components/icons/ASportIcon.vue';
-import ATragedyIcon from '~/components/icons/ATragedyIcon.vue';
+import AButton from '@/components/button/AButton.vue';
+import ACyberpunkIcon from '@/components/icons/ACyberpunkIcon.vue';
+import ADramaIcon from '@/components/icons/ADramaIcon.vue';
+import AFantasyIcon from '@/components/icons/AFantasyIcon.vue';
+import AFemaleIcon from '@/components/icons/AFemaleIcon.vue';
+import AMagicIcon from '@/components/icons/AMagicIcon.vue';
+import AMaleIcon from '@/components/icons/AMaleIcon.vue';
+import APsychologyIcon from '@/components/icons/APsychologyIcon.vue';
+import ARomanceIcon from '@/components/icons/ARomanceIcon.vue';
+import ASportIcon from '@/components/icons/ASportIcon.vue';
+import ATragedyIcon from '@/components/icons/ATragedyIcon.vue';
 
 const genreList = [
   { text: 'Спорт', leftIcon: markRaw(ASportIcon) },

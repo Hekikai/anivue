@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import ALink from '~/components/header/ALink.vue';
-import GenreList from '~/components/main/GenreList.vue';
-import TitleAside from '~/components/main/TitleAside.vue';
+import ALink from '@/components/header/ALink.vue';
+import GenreList from '@/components/main/GenreList.vue';
+import TitleAside from '@/components/main/TitleAside.vue';
 </script>
 
 <template>
   <div :class="$style.container">
     <div :class="$style.gradient">
       <img
-        src="~/assets/images/main.jpg"
+        src="../assets/images/main.jpg"
         alt="Изображение тайтла"
       />
     </div>
@@ -17,7 +17,7 @@ import TitleAside from '~/components/main/TitleAside.vue';
 
     <genre-list :class="$style.genreCarousel" />
 
-    <section :class="$style.ongoing">
+    <section>
       <div :class="$style.ongoingHeader">
         <h3 class="heading-3">
           Сейчас на экранах
@@ -79,12 +79,9 @@ import TitleAside from '~/components/main/TitleAside.vue';
   margin-bottom: 30px;
 }
 
-.ongoing {
-
-}
-
 .ongoingHeader {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 </style>

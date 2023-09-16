@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import AButton from '~/components/button/AButton.vue';
-import ABookmarkOutlineIcon from '~/components/icons/ABookmarkOutlineIcon.vue';
-import APlayIcon from '~/components/icons/APlayIcon.vue';
+import AButton from '@/components/button/AButton.vue';
+import ABookmarkOutlineIcon from '@/components/icons/ABookmarkOutlineIcon.vue';
+import APlayIcon from '@/components/icons/APlayIcon.vue';
 </script>
 
 <template>
