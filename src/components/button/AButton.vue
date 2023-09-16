@@ -32,7 +32,6 @@ withDefaults(defineProps<{
   color: var(--neutral-900);
   border-radius: 14px;
 
-  cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
 
   &:active {
@@ -55,7 +54,6 @@ withDefaults(defineProps<{
   &:disabled {
     color: var(--neutral-400);
     background-color: var(--lime-200);
-    cursor: not-allowed;
   }
 }
 
@@ -74,7 +72,6 @@ withDefaults(defineProps<{
   &:disabled {
     color: var(--neutral-400);
     background-color: var(--lime-50);
-    cursor: not-allowed;
   }
 }
 

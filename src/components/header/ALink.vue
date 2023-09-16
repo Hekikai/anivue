@@ -19,16 +19,15 @@ const isOnIndexPage = computed(() => useRoute().name === 'index');
 </script>
 
 <template>
-  <NuxtLink
-    :to="to"
-    :active-class="$style.activeLink"
+  <a
+    :href="to"
     class="text-sm"
     :class="[$style.link, $style[type], $style[size], isOnIndexPage && $style.indexLink]"
   >
     <slot>
       {{ title }}
     </slot>
-  </NuxtLink>
+  </a>
 </template>
 
 <style module lang="scss">

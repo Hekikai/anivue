@@ -1,0 +1,18 @@
+html {
+  // For rem in iOS
+  font: -apple-system-body;
+  // Preventing font zoom in iOS
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  line-height: 1;
+  // Basic family
+  font-family: sans-serif;
+  // Add readability
+  text-rendering: optimizeLegibility;
+  // Font smoothing
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+

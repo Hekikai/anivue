@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { markRaw } from 'vue';
 import AButton from '@/components/button/AButton.vue';
 import ACyberpunkIcon from '@/components/icons/ACyberpunkIcon.vue';
 import ADramaIcon from '@/components/icons/ADramaIcon.vue';
