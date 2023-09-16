@@ -1,12 +1,12 @@
 <template>
   <the-layout>
-    <a-header />
+    <header-widget />
     <router-view />
   </the-layout>
 </template>
 
 <script setup lang="ts">
-import AHeader from '@/components/header/AHeader.vue';
+import HeaderWidget from '@/widgets/HeaderWidget.vue';
 import TheLayout from '@/layout/TheLayout.vue';
 </script>
 

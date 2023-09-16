@@ -1,21 +1,21 @@
 <script setup lang="ts">
-import ALink from '@/components/header/ALink.vue';
-import GenreList from '@/components/main/GenreList.vue';
-import TitleAside from '@/components/main/TitleAside.vue';
+import ALink from '@/shared/ui/link/ALink.vue';
+import GenreListWidget from '@/widgets/GenreListWidget.vue';
+import AsideTitleInfoWidget from '@/widgets/AsideTitleInfoWidget.vue';
 </script>
 
 <template>
   <div :class="$style.container">
     <div :class="$style.gradient">
       <img
-        src="@/assets/images/main.jpg"
+        src="@/shared/assets/img/main.jpg"
         alt="Изображение тайтла"
       />
     </div>
 
-    <title-aside />
+    <aside-title-info-widget />
 
-    <genre-list :class="$style.genreCarousel" />
+    <genre-list-widget :class="$style.genreCarousel" />
 
     <section>
       <div :class="$style.ongoingHeader">

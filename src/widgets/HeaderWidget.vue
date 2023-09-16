@@ -1,10 +1,9 @@
 <script setup lang="ts">
-// TODO: make a-header-link component
-import ALink from '@/components/header/ALink.vue';
-import AnivueLogo from '@/components/icons/AnivueLogo.vue';
-import ANotifyIcon from '@/components/icons/ANotifyIcon.vue';
-import AProfileIcon from '@/components/icons/AProfileIcon.vue';
-import ASearchIcon from '@/components/icons/ASearchIcon.vue';
+import ALink from '@/shared/ui/link/ALink.vue';
+import AnivueLogo from '@/shared/icons/AnivueLogo.vue';
+import ANotifyIcon from '@/shared/icons/ANotifyIcon.vue';
+import AProfileIcon from '@/shared/icons/AProfileIcon.vue';
+import ASearchIcon from '@/shared/icons/ASearchIcon.vue';
 </script>
 
 <template>
