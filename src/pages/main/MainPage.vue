@@ -1,23 +1,18 @@
 <script setup lang="ts">
 import ALink from '@/shared/ui/link/ALink.vue';
 import GenreListWidget from '@/widgets/GenreListWidget.vue';
-import AsideTitleInfoWidget from '@/widgets/AsideTitleInfoWidget.vue';
 </script>
 
 <template>
   <div :class="$style.container">
-    <div :class="$style.gradient">
-      <img
-        src="@/shared/assets/img/main.jpg"
-        alt="Изображение тайтла"
-      />
-    </div>
+    <div :class="$style.baz" />
 
-    <aside-title-info-widget />
+    <genre-list-widget
+      :class="$style.genreCarousel"
+      class="p-x-72"
+    />
 
-    <genre-list-widget :class="$style.genreCarousel" />
-
-    <section>
+    <section class="p-x-72">
       <div :class="$style.ongoingHeader">
         <h3 class="heading-3">
           Сейчас на экранах
@@ -35,40 +30,19 @@ import AsideTitleInfoWidget from '@/widgets/AsideTitleInfoWidget.vue';
 </template>
 
 <style module lang="scss">
-.gradient {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-
-  z-index: -1;
-
-  &::after {
-    content:'';
-    position:absolute;
-    display: inline-block;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(23, 23, 23, 0.4), rgba(23, 23, 23, 0.4));
-  }
-
-  img {
-    display: block;
-    height: 760px;
-    width: 100%;
-
-    object-fit: cover;
-    user-select: none;
-  }
+.baz {
+  height: 590px;
+  background-color: #0D9488;
 }
+
 .container {
   display: flex;
   flex-direction: column;
 }
 
 .genreCarousel {
-  padding: 40px 0 20px 0;
+  padding-top: 40px;
+  padding-bottom: 20px;
   margin-bottom: 30px;
 }
 

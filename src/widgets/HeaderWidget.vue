@@ -7,7 +7,10 @@ import ASearchIcon from '@/shared/icons/ASearchIcon.vue';
 </script>
 
 <template>
-  <nav :class="$style.nav">
+  <nav
+    :class="$style.nav"
+    class="p-x-72"
+  >
     <div>
       <a-link
         to="/"

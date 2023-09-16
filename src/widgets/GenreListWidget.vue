@@ -50,10 +50,21 @@ const genreList = [
 
 <style module lang="scss">
 .genreList {
+  position: relative;
   display: flex;
   gap: 14px;
+  overflow: hidden;
 
-  overflow-x: scroll;
+  &::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    box-shadow: 0 0 40px 40px var(--neutral-50);
+    display: block;
+  }
 }
 
 .genreLeftIcon {
