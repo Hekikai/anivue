@@ -1,0 +1,112 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import AsideTitleInfoWidget from '@/widgets/AsideTitleInfoWidget.vue';
+
+const sliderRef = ref<HTMLDivElement | null>(null);
+const sliderInnerRef = ref<HTMLDivElement | null>(null);
+</script>
+
+<template>
+  <div
+    ref="sliderRef"
+    :class="$s.slider"
+  >
+    <div
+      ref="sliderInnerRef"
+      :class="$s.sliderInner"
+    >
+      <div :class="$s.slideImg">
+        <img
+          src="@/shared/assets/img/main.jpg"
+          alt="alt"
+        />
+        <aside-title-info-widget :class="$s.titleAside" />
+      </div>
+      <div :class="$s.slideImg">
+        <img
+          src="@/shared/assets/img/main.jpg"
+          alt="alt"
+        />
+        <aside-title-info-widget :class="$s.titleAside" />
+      </div>
+      <div :class="$s.slideImg">
+        <img
+          src="@/shared/assets/img/main.jpg"
+          alt="alt"
+        />
+        <aside-title-info-widget :class="$s.titleAside" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<style module="$s" lang="scss">
+.slider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sliderInner {
+  position: absolute;
+  top: 0;
+  // TODO: dynamically calculate
+  left: -1290px;
+
+  padding: 30px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1296px);
+  column-gap: 32px;
+}
+
+.slideImg {
+  position: relative;
+  max-height: 530px;
+  height: 100%;
+
+  border-radius: 24px;
+
+  &::after {
+    position: absolute;
+    content: '';
+    background: linear-gradient(90deg, rgba(23, 23, 23, 0.66) 0%, rgba(23, 23, 23, 0.56) 23.74%,
+        rgba(23, 23, 23, 0.46) 38.08%, rgba(23, 23, 23, 0.33) 49.39%, rgba(23, 23, 23, 0.13) 60.1%,
+        rgba(23, 23, 23, 0.00) 69.14%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 24px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    background: rgba(23, 23, 23, 0.36);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 24px;
+  }
+
+  & > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+
+    border-radius: 24px;
+    user-select: none;
+  }
+}
+
+.titleAside {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5%;
+
+  z-index: 2;
+}
+</style>

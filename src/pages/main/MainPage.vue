@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import AGallery from '@/shared/ui/gallery/AGallery.vue';
 import ALink from '@/shared/ui/link/ALink.vue';
 import GenreListWidget from '@/widgets/GenreListWidget.vue';
 </script>
 
 <template>
   <div :class="$style.container">
-    <div :class="$style.baz" />
+    <a-gallery :class="$style.baz" />
 
     <div :class="$style.genreCarouselContainer">
       <genre-list-widget
@@ -34,11 +35,11 @@ import GenreListWidget from '@/widgets/GenreListWidget.vue';
 </template>
 
 <style module lang="scss">
-@import "@/app/styles/mixins/index";
+@import "@/app/styles/mixins";
 
 .baz {
+  padding: 30px;
   height: 590px;
-  background-color: #0D9488;
 }
 
 .container {

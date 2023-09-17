@@ -53,8 +53,6 @@ import APlayIcon from '@/shared/icons/APlayIcon.vue';
 
 <style module lang="scss">
 .titleAside {
-  margin-top: 246px;
-  margin-bottom: 120px;
   max-width: 570px;
   width: 570px;
 
