@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import AStarIcon from '@/shared/icons/AStarIcon.vue';
 import AButton from '@/shared/ui/button/AButton.vue';
 import ABookmarkOutlineIcon from '@/shared/icons/ABookmarkOutlineIcon.vue';
 import APlayIcon from '@/shared/icons/APlayIcon.vue';
+import AThing from '@/shared/ui/thing/AThing.vue';
 </script>
 
 <template>
@@ -13,13 +15,37 @@ import APlayIcon from '@/shared/icons/APlayIcon.vue';
       Невероятные приключения ДжоДжо: Золотой ветер
     </h1>
     <ul>
-      <li>Lorem</li>
+      <li>
+        <a-thing
+          text="8.8"
+          size="md"
+        >
+          <template #left-icon>
+            <a-star-icon />
+          </template>
+        </a-thing>
+      </li>
       <li />
-      <li>Lorem</li>
+      <li>
+        <a-thing
+          text="2020"
+          size="md"
+        />
+      </li>
       <li />
-      <li>Lorem</li>
+      <li>
+        <a-thing
+          text="Фэнтези"
+          size="md"
+        />
+      </li>
       <li />
-      <li>Lorem</li>
+      <li>
+        <a-thing
+          text="R-17"
+          size="md"
+        />
+      </li>
     </ul>
     <p class="text-base">
       Джорно Джованна — юный, но весьма амбициозный парень, являющийся сыном знаменитого Дио Брандо.
@@ -70,19 +96,24 @@ import APlayIcon from '@/shared/icons/APlayIcon.vue';
     display: flex;
     gap: 20px;
     align-items: center;
-    color: var(--neutral-50);
+
     margin-bottom: 18px;
+
+    & > li {
+      color: var(--neutral-50);
+    }
 
     li:nth-child(2n) {
       width: 5px;
       height: 5px;
+
       border-radius: 50%;
       opacity: 0.64;
       background-color: var(--neutral-300);
     }
   }
 
-  p {
+  & > p {
     color: var(--neutral-50);
     margin-bottom: 36px;
   }
