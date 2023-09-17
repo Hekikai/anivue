@@ -1,6 +1,5 @@
 <script setup lang="ts">
-type AButttonType = 'primary' | 'secondary' | 'tertiary'
-type AButtonSize = 'md' | 'xs';
+import type { AButtonSize, AButttonType } from '@/shared/ui/button/types';
 
 withDefaults(defineProps<{
   type: AButttonType
