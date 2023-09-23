@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ACard from '@/shared/ui/card/ACard.vue';
 import AGallery from '@/shared/ui/gallery/AGallery.vue';
 import ALink from '@/shared/ui/link/ALink.vue';
 import GenreListWidget from '@/widgets/GenreListWidget.vue';
@@ -30,6 +31,12 @@ import GenreListWidget from '@/widgets/GenreListWidget.vue';
           Смотреть еще
         </a-link>
       </div>
+      <main :class="$style.ongoingContainer">
+        <a-card
+          v-for="n in 8"
+          :key="n"
+        />
+      </main>
     </section>
   </div>
 </template>
@@ -73,5 +80,12 @@ import GenreListWidget from '@/widgets/GenreListWidget.vue';
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 24px;
+}
+
+.ongoingContainer {
+  display: flex;
+  gap: 24px;
+  overflow: hidden;
 }
 </style>
