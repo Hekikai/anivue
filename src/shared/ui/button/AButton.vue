@@ -2,10 +2,11 @@
 import type { AButtonSize, AButttonType } from '@/shared/ui/button/types';
 
 withDefaults(defineProps<{
-  type: AButttonType
+  type?: AButttonType
   size?: AButtonSize
   text?: string
 }>(), {
+  type: 'primary',
   size: 'md',
   text: '',
 });
