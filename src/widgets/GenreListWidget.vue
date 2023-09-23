@@ -27,7 +27,7 @@ const genreList = [
 </script>
 
 <template>
-  <ul :class="$style.genreList">
+  <ul :class="$s.genreList">
     <li
       v-for="genre in genreList"
       :key="genre.text"
@@ -40,7 +40,7 @@ const genreList = [
         <template #left-icon>
           <component
             :is="genre.leftIcon"
-            :class="$style.genreLeftIcon"
+            :class="$s.genreLeftIcon"
           />
         </template>
       </a-button>
@@ -48,7 +48,7 @@ const genreList = [
   </ul>
 </template>
 
-<style module lang="scss">
+<style module="$s" lang="scss">
 .genreList {
   display: flex;
   gap: 14px;

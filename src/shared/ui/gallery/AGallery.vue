@@ -40,7 +40,7 @@ const sliderInnerRef = ref<HTMLDivElement | null>(null);
   </div>
 </template>
 
-<style module="$s" lang="scss">
+<style module="$s"  lang="scss">
 .slider {
   width: 100%;
   position: relative;

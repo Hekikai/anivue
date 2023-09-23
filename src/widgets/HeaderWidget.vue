@@ -8,21 +8,21 @@ import ASearchIcon from '@/shared/icons/ASearchIcon.vue';
 
 <template>
   <nav
-    :class="$style.nav"
+    :class="$s.nav"
     class="p-x-72"
   >
     <div>
       <a-link
         to="/"
-        :class="$style.logo"
+        :class="$s.logo"
         type="primary"
       >
-        <anivue-logo :class="$style.logoSvg" />
+        <anivue-logo :class="$s.logoSvg" />
         <span>Anivue</span>
       </a-link>
     </div>
 
-    <ul :class="$style.links">
+    <ul :class="$s.links">
       <li>
         <a-link
           type="primary"
@@ -49,7 +49,7 @@ import ASearchIcon from '@/shared/icons/ASearchIcon.vue';
       </li>
     </ul>
 
-    <ul :class="$style.navButtons">
+    <ul :class="$s.navButtons">
       <li>
         <a-link
           to="/manga"
@@ -78,7 +78,7 @@ import ASearchIcon from '@/shared/icons/ASearchIcon.vue';
   </nav>
 </template>
 
-<style module lang="scss">
+<style module="$s" lang="scss">
 .nav {
   display: flex;
   padding: 18px 0;

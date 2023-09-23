@@ -2,12 +2,12 @@
 </script>
 
 <template>
-  <main :class="$style.main">
+  <main :class="$s.main">
     <slot />
   </main>
 </template>
 
-<style module lang="scss">
+<style module="$s" lang="scss">
 .main {
   max-width: 1440px;
   margin: 0 auto;

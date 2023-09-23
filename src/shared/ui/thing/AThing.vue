@@ -37,7 +37,7 @@ withDefaults(defineProps<{
   </section>
 </template>
 
-<style module="$s" lang="scss">
+<style module="$s"  lang="scss">
 .thingContainer {
   display: flex;
   align-items: center;

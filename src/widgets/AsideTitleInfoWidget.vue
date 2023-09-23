@@ -7,7 +7,7 @@ import AThing from '@/shared/ui/thing/AThing.vue';
 </script>
 
 <template>
-  <aside :class="$style.titleAside">
+  <aside :class="$s.titleAside">
     <h6 class="text-xs">
       JoJo's Bizarre Adventure: Golden Wind
     </h6>
@@ -51,7 +51,7 @@ import AThing from '@/shared/ui/thing/AThing.vue';
       Джорно Джованна — юный, но весьма амбициозный парень, являющийся сыном знаменитого Дио Брандо.
       Однако, в отличие от своего отца, Джорно избрал совсем иной путь к достижению свой мечты
     </p>
-    <footer :class="$style.titleFooter">
+    <footer :class="$s.titleFooter">
       <a-button
         text="Начать просмотр с 1 серии"
         type="primary"
@@ -77,7 +77,7 @@ import AThing from '@/shared/ui/thing/AThing.vue';
   </aside>
 </template>
 
-<style module lang="scss">
+<style module="$s" lang="scss">
 .titleAside {
   max-width: 570px;
   width: 570px;

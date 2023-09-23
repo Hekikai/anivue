@@ -15,7 +15,7 @@ withDefaults(defineProps<{
 <template>
   <button
     class="text-base-medium"
-    :class="[$style.button, $style[type], $style[size], !text && $style.noText]"
+    :class="[$s.button, $s[type], $s[size], !text && $s.noText]"
   >
     <slot name="left-icon" />
     {{ text }}
@@ -23,7 +23,7 @@ withDefaults(defineProps<{
   </button>
 </template>
 
-<style module lang="scss">
+<style module="$s" lang="scss">
 .button {
   display: flex;
   align-items: center;

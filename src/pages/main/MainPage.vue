@@ -6,12 +6,12 @@ import GenreListWidget from '@/widgets/GenreListWidget.vue';
 </script>
 
 <template>
-  <div :class="$style.container">
-    <a-gallery :class="$style.baz" />
+  <div :class="$s.container">
+    <a-gallery :class="$s.baz" />
 
-    <div :class="$style.genreCarouselContainer">
+    <div :class="$s.genreCarouselContainer">
       <genre-list-widget
-        :class="$style.genreCarousel"
+        :class="$s.genreCarousel"
         class="p-x-72"
       />
 
@@ -19,7 +19,7 @@ import GenreListWidget from '@/widgets/GenreListWidget.vue';
     </div>
 
     <section class="p-x-72">
-      <div :class="$style.ongoingHeader">
+      <div :class="$s.ongoingHeader">
         <h3 class="heading-3">
           Сейчас на экранах
         </h3>
@@ -31,7 +31,7 @@ import GenreListWidget from '@/widgets/GenreListWidget.vue';
           Смотреть еще
         </a-link>
       </div>
-      <main :class="$style.ongoingContainer">
+      <main :class="$s.ongoingContainer">
         <a-card
           v-for="n in 8"
           :key="n"
@@ -41,7 +41,7 @@ import GenreListWidget from '@/widgets/GenreListWidget.vue';
   </div>
 </template>
 
-<style module lang="scss">
+<style module="$s" lang="scss">
 @import "@/app/styles/mixins";
 
 .baz {

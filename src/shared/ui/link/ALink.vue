@@ -16,7 +16,7 @@ withDefaults(defineProps<{
 <template>
   <a
     :href="to"
-    :class="[$style.link, $style[type], $style[size]]"
+    :class="[$s.link, $s[type], $s[size]]"
   >
     <slot>
       {{ title }}
@@ -24,7 +24,7 @@ withDefaults(defineProps<{
   </a>
 </template>
 
-<style module lang="scss">
+<style module="$s" lang="scss">
 .link {
 
   transition: color 0.2s ease;
