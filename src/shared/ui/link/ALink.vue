@@ -25,8 +25,9 @@ withDefaults(defineProps<{
 </template>
 
 <style module="$s" lang="scss">
-.link {
+@import "@/app/styles/mixins";
 
+.link {
   transition: color 0.2s ease;
   text-decoration: none;
   outline-width: 0;
@@ -34,7 +35,11 @@ withDefaults(defineProps<{
   &.primary {
     color: var(--neutral-800);
 
-    &:hover, &:focus {
+    @include on-hover {
+      color: var(--lime-700);
+    }
+
+    @include on-focus {
       color: var(--lime-700);
     }
 
@@ -46,7 +51,11 @@ withDefaults(defineProps<{
   &.secondary {
     color: var(--neutral-800);
 
-    &:hover, &:focus {
+    @include on-hover {
+      color: var(--neutral-700);
+    }
+
+    @include on-focus {
       color: var(--neutral-700);
     }
 

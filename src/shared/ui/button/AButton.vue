@@ -24,6 +24,8 @@ withDefaults(defineProps<{
 </template>
 
 <style module="$s" lang="scss">
+@import "@/app/styles/mixins";
+
 .button {
   display: flex;
   align-items: center;
@@ -47,7 +49,7 @@ withDefaults(defineProps<{
     background-color: var(--lime-500);
   }
 
-  &:hover {
+  @include on-hover {
     background-color: var(--lime-300);
   }
 
@@ -65,7 +67,7 @@ withDefaults(defineProps<{
     background-color: var(--lime-300);
   }
 
-  &:hover {
+  @include on-hover {
     background-color: var(--lime-100);
   }
 
@@ -78,7 +80,7 @@ withDefaults(defineProps<{
 .tertiary {
   background-color: var(--neutral-100);
 
-  &:hover {
+  @include on-hover {
     background-color: var(--neutral-200);
   }
 
