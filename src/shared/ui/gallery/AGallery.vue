@@ -1,16 +1,26 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import AGalleryNavigation from '@/shared/ui/gallery/gallery-navigation/AGalleryNavigation.vue';
 import AsideTitleInfoWidget from '@/widgets/AsideTitleInfoWidget.vue';
 
 const sliderRef = ref<HTMLDivElement | null>(null);
 const sliderInnerRef = ref<HTMLDivElement | null>(null);
+
+const showNavigation = ref(false);
 </script>
 
 <template>
   <div
     ref="sliderRef"
     :class="$s.slider"
+    @mouseenter="showNavigation = true"
+    @mouseleave="showNavigation = false"
   >
+    <a-gallery-navigation
+      v-if="showNavigation"
+      :class="$s.sliderNavigation"
+      direction="forward"
+    />
     <div
       ref="sliderInnerRef"
       :class="$s.sliderInner"
@@ -20,6 +30,7 @@ const sliderInnerRef = ref<HTMLDivElement | null>(null);
           src="@/shared/assets/img/main.jpg"
           alt="alt"
         />
+        <!--        TODO: remove widget from UI! -->
         <aside-title-info-widget :class="$s.titleAside" />
       </div>
       <div :class="$s.slideImg">
@@ -44,7 +55,9 @@ const sliderInnerRef = ref<HTMLDivElement | null>(null);
 .slider {
   width: 100%;
   position: relative;
+
   overflow: hidden;
+  cursor: pointer;
 }
 
 .sliderInner {
@@ -108,5 +121,13 @@ const sliderInnerRef = ref<HTMLDivElement | null>(null);
   left: 5%;
 
   z-index: 2;
+}
+
+.sliderNavigation {
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
 }
 </style>
