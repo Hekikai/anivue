@@ -16,11 +16,13 @@ const showNavigation = ref(false);
     @mouseenter="showNavigation = true"
     @mouseleave="showNavigation = false"
   >
-    <a-gallery-navigation
-      v-if="showNavigation"
-      :class="$s.sliderNavigation"
-      direction="forward"
-    />
+    <transition name="v-fade">
+      <a-gallery-navigation
+        v-if="showNavigation"
+        :class="$s.sliderNavigation"
+        direction="forward"
+      />
+    </transition>
     <div
       ref="sliderInnerRef"
       :class="$s.sliderInner"
@@ -125,7 +127,7 @@ const showNavigation = ref(false);
 
 .sliderNavigation {
   position: absolute;
-  left: 3%;
+  right: 3%;
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;

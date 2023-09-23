@@ -30,6 +30,11 @@ withDefaults(defineProps<{
   align-items: center;
   border-radius: 14px;
   color: var(--neutral-700);
+  transition: all 0.2s ease;
+
+  &:active {
+    scale: 0.9;
+  }
 
   &.default {
     width: 50px;
