@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-
 type ALinkType = 'primary' | 'secondary'
 type ALinkSize = 'lg' | 'md' | 'sm' | 'sm-bold' | 'xs'
 
@@ -14,15 +11,12 @@ withDefaults(defineProps<{
   size: 'lg',
   title: '',
 });
-
-const isOnIndexPage = computed(() => useRoute().name === 'Main');
 </script>
 
 <template>
   <a
     :href="to"
-    class="text-sm"
-    :class="[$style.link, $style[type], $style[size], isOnIndexPage && $style.indexLink]"
+    :class="[$style.link, $style[type], $style[size]]"
   >
     <slot>
       {{ title }}

@@ -12,10 +12,7 @@ withDefaults(defineProps<{
 </script>
 
 <template>
-  <section
-    :class="[
-      $s.thingContainer, $s[type], $s[size]]"
-  >
+  <section :class="[$s.thingContainer, $s[type], $s[size]]">
     <div
       v-if="$slots['left-icon']"
       :class="[$s.leftIcon, $s[size], $s[type]]"
@@ -43,7 +40,7 @@ withDefaults(defineProps<{
 <style module="$s" lang="scss">
 .thingContainer {
   display: flex;
-  flex-direction: row;
+  align-items: center;
   gap: 2px;
 
   &.filled {
