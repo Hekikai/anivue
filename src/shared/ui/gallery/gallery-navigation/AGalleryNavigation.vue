@@ -16,7 +16,9 @@ withDefaults(defineProps<{
 </script>
 
 <template>
-  <button :class="[$s.button, $s[type], $s[size]]">
+  <button
+    :class="[$s.button, $s[type], $s[size]]"
+  >
     <slot name="navigation">
       <a-arrow-forward :class="[$s.navigation, $s[size], $s[direction]]" />
     </slot>

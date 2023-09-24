@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import AGalleryNavigation from '@/shared/ui/gallery/gallery-navigation/AGalleryNavigation.vue';
 import AsideTitleInfoWidget from '@/widgets/AsideTitleInfoWidget.vue';
 
@@ -7,6 +7,27 @@ const sliderRef = ref<HTMLDivElement | null>(null);
 const sliderInnerRef = ref<HTMLDivElement | null>(null);
 
 const showNavigation = ref(false);
+const currentSlide = ref(1);
+const foo = computed(() => {
+  return `-${currentSlide.value * 1290}px`;
+});
+const changeSlide = (direction: 'forward' | 'backward') => {
+  // TODO: make with array slides length
+
+  if (direction === 'forward') {
+    if (currentSlide.value === 2) {
+      currentSlide.value = 0;
+      return;
+    }
+    currentSlide.value++;
+    return;
+  }
+  if (currentSlide.value === 0) {
+    currentSlide.value = 2;
+    return;
+  }
+  currentSlide.value--;
+};
 </script>
 
 <template>
@@ -16,13 +37,21 @@ const showNavigation = ref(false);
     @mouseenter="showNavigation = true"
     @mouseleave="showNavigation = false"
   >
-    <transition name="v-fade">
+    <transition-group name="v-fade">
       <a-gallery-navigation
-        v-if="showNavigation"
+        v-if="showNavigation && currentSlide !== 2"
         :class="$s.sliderNavigation"
         direction="forward"
+        @click="changeSlide('forward')"
       />
-    </transition>
+
+      <a-gallery-navigation
+        v-if="showNavigation && currentSlide > 0"
+        :class="[$s.sliderNavigation, $s.back]"
+        direction="backward"
+        @click="changeSlide('backward')"
+      />
+    </transition-group>
     <div
       ref="sliderInnerRef"
       :class="$s.sliderInner"
@@ -66,7 +95,8 @@ const showNavigation = ref(false);
   position: absolute;
   top: 0;
   // TODO: dynamically calculate
-  left: -1290px;
+  transition: left 0.2s ease;
+  left: v-bind(foo);
 
   padding: 30px;
 
@@ -131,5 +161,9 @@ const showNavigation = ref(false);
   top: 50%;
   transform: translateY(-50%);
   z-index: 3;
+
+  &.back {
+    left: 3%;
+  }
 }
 </style>
