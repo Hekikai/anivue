@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import ACard from '@/shared/ui/card/ACard.vue';
 import AGallery from '@/shared/ui/gallery/AGallery.vue';
-import ALink from '@/shared/ui/link/ALink.vue';
 import GenreListWidget from '@/widgets/GenreListWidget.vue';
+import OngoingsWidget from '@/widgets/ongoing/OngoingsWidget.vue';
+import RecommendationsWidget from '@/widgets/recommendations/RecommendationsWidget.vue';
 </script>
 
 <template>
   <div :class="$s.container">
-    <a-gallery :class="$s.baz" />
+    <a-gallery :class="$s.gallery" />
 
     <div :class="$s.genreCarouselContainer">
       <genre-list-widget
@@ -18,33 +18,26 @@ import GenreListWidget from '@/widgets/GenreListWidget.vue';
       <section />
     </div>
 
-    <section class="p-x-72">
-      <div :class="$s.ongoingHeader">
-        <h3 class="heading-3">
-          Сейчас на экранах
-        </h3>
-        <a-link
-          to="/anime"
-          type="secondary"
-          size="sm"
-        >
-          Смотреть еще
-        </a-link>
-      </div>
-      <main :class="$s.ongoingContainer">
-        <a-card
-          v-for="n in 8"
-          :key="n"
-        />
-      </main>
-    </section>
+    <article
+      class="p-x-72"
+      :class="$s.article"
+    >
+      <ongoings-widget />
+    </article>
+
+    <article
+      class="p-x-72"
+      :class="$s.article"
+    >
+      <recommendations-widget />
+    </article>
   </div>
 </template>
 
 <style module="$s" lang="scss">
 @import "@/app/styles/mixins";
 
-.baz {
+.gallery {
   padding: 30px;
   height: 590px;
 }
@@ -76,16 +69,7 @@ import GenreListWidget from '@/widgets/GenreListWidget.vue';
   @include hide-scrollbar()
 }
 
-.ongoingHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 24px;
-}
-
-.ongoingContainer {
-  display: flex;
-  gap: 24px;
-  overflow: hidden;
+.article {
+  margin-bottom: 30px;
 }
 </style>
